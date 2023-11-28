@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f4f4f4 ;
+    color: #161616;
+    text-align: center;
+    padding: 10px 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #606060;
+}
+
+header .logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+header .btn-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    padding: 12px 18px;
+    background-color: rgb(51, 103, 235);
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border-radius: 0.4em;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.btn:hover{
+    background-color: rgb(30, 83, 218);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: scale(1.01);
+}
+
+header h2{
+    font-weight: 600;
+}
+
+.logo-container img{
+    width: 50px;
+}
+
+#blog-list {
+    padding: 50px 10vh;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.blog-post {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    width: 350px;
+    padding: 15px;
+    border-radius: 0.8em;
+    transition: all 0.3s ease;
+    background: rgb(231, 248, 245);
+    position: relative;
+}
+
+.blog-post:hover {
+    box-shadow: rgba(60, 64, 67, 0.5) 0px 1px 2px 0px, rgba(60, 64, 67, 0.3) 0px 1px 3px 1px;
+    transform: scale(1.02);
+}
+
+.blog-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #111;
+}
+
+.blog-date{
+    font-size: 0.9em;
+    color: #777;
+}
+
+.blog-content {
+    margin-top: 10px;
+    color: #333;
+}
+
+.delete-button{
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: rgb(227, 225, 225);
+    border-radius: 50%;
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.delete-button:hover{
+    opacity: 0.7;
+}
+
+.delete-button img{
+    width: 25px;
+}
+
+
+/* ... (existing code) */
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(158, 215, 232);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex-direction: column;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    display: none;
+}
+
+form .close-img{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+form .close-img img{
+    width: 15px;
+    cursor: pointer;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 0.4em;
+    font-size: 16px;
+}
+
+
+/* modal styles */
+
+/* Add styles for the modal container */
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Add styles for the modal content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80vw;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+
+#modalTitle{
+    color: #111;
+    font-weight: 600;
+}
+
+#modalContent{
+    margin-top: 10px;
+    padding-right: 20px;
+    color: #222;
+}
+/* Add styles for the close button in the modal */
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-modal img{
+    width: 20px;
+}
+
+.close-modal:hover{
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 800px) {
+    #blog-list {
+        padding: 30px 10px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .logo-container h2{
+       display:none;
+    }
+    .modal-content {
+        padding: 15px;
+        max-width: 95vw;
+    }
+    header {
+        padding: 10px;
+    }
+    form {
+        width: 90vw;
+    }
+}
